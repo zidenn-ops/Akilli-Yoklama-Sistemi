@@ -18,7 +18,7 @@ Bu proje, Python ve Derin Öğrenme (Deep Learning) teknikleri kullanılarak gel
 
 ## 🚀 Kurulum (Setup)
 1. Python 3.12 Sürümünü Kurunuz
-2. Gerekli Kütüphaneleri Terminal Veya CMD Aracılığı ile kurunuz
-    pip install opencv-python numpy tf_keras tensorflow
+2. Gerekli Kütüphaneleri Terminal Veya CMD Aracılığı ile kurunuz  "pip install opencv-python numpy tf_keras tensorflow"
 3. Tanınmasını istediğiniz yüzleri [Teachable Machine](https://teachablemachine.withgoogle.com) sitesinden Get started > Image Project kısmına Kişileri tek tek tanıtıp train model dedikten sonra export model ile "TensorFlow" seçeneğini seçip export aldıktan sonra "keras_model.h5" ve "labels.txt" dosyalarını ana dosyadakiler ile değiştiriyoruz
+
 4. Terminale python main.py yazıyoruz ve işlem bu kadar programımız calısıyor
