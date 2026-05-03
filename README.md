@@ -1,24 +1,28 @@
-# AI-Powered Attendance System (Yapay Zeka Destekli Akıllı Yoklama Sistemi) 🚀
+# 🚀 Akıllı Yoklama Sistemi (AI & Cloud Entegrasyonlu)
 
-Bu proje, Python ve Derin Öğrenme (Deep Learning) teknikleri kullanılarak geliştirilmiş, gerçek zamanlı bir yoklama takip sistemidir.
+Bu proje, bir lise yazılım projesi olarak geliştirilmiş olup; yapay zeka ve bulut bilişim teknolojilerini bir araya getirerek okullarda yoklama sürecini otomatikleştirmeyi hedefler.
 
-## 🌟 Özellikler (Features)
-- **Çoklu Yüz Tanıma:** Aynı anda birden fazla kişiyi tespit edebilir.
-- **Anlık Varlık Takibi:** Kameradan ayrılan kişiler 3 saniye içinde listeden otomatik olarak silinir.
-- **Excel Entegrasyonu:** Tanınan kişileri tarih ve saat damgasıyla `yoklama.csv` dosyasına kaydeder.
-- **Minimalist HUD Arayüzü:** VGA kameralar için optimize edilmiş, ekranı kaplamayan şeffaf bilgi paneli.
-- **Yüksek Performans:** Görüntü işleme süreçleri OpenCV ve TensorFlow kullanılarak optimize edilmiştir.
+## ✨ Projenin Amacı ve Çalışma Mantığı
+Sistem, bilgisayar kamerasından aldığı canlı görüntüyü anlık olarak işler. Derin öğrenme (Deep Learning) temelli bir model kullanarak öğrencilerin yüzlerini tanır ve isimlerini belirler. Belirlenen isimler, sistem tarafından tarih ve saat bilgisiyle birlikte bir `.csv` (Excel uyumlu) dosyasına kaydedilir.
 
-## 🛠️ Kullanılan Teknolojiler (Tech Stack)
-- **Python 3.x**
-- **OpenCV:** Görüntü işleme ve yüz tespiti (Haar Cascade).
-- **TensorFlow / Keras:** Derin öğrenme model tahmini.
-- **Google Teachable Machine:** Model eğitimi.
-- **Gemini AI:** Yazılım mimarisi ve kod optimizasyonu desteği.
+### Öne Çıkan Özellikler:
+- **Dinamik Bulut Güncelleme:** Model dosyaları (`.h5` ve `labels.txt`) doğrudan Google Drive üzerinden çekilir. Bu sayede yeni bir öğrenci eklemek için kodun değiştirilmesine gerek kalmaz.
+- **Modern Arayüz:** Flask altyapısı kullanılarak oluşturulan Turkuaz Neon temalı dashboard üzerinden canlı takip yapılabilir.
+- **Otomatik Veri Kaydı:** Tanınan her öğrenci, benzersiz bir şekilde yoklama listesine işlenir ve bu liste web üzerinden indirilebilir.
 
-## 🚀 Kurulum (Setup)
-1. Python 3.12 Sürümünü Kurunuz
-2. Gerekli Kütüphaneleri Terminal Veya CMD Aracılığı ile kurunuz  "pip install opencv-python numpy tf_keras tensorflow"
-3. Tanınmasını istediğiniz yüzleri [Teachable Machine](https://teachablemachine.withgoogle.com) sitesinden Get started > Image Project kısmına Kişileri tek tek tanıtıp train model dedikten sonra export model ile "TensorFlow" seçeneğini seçip export aldıktan sonra "keras_model.h5" ve "labels.txt" dosyalarını ana dosyadakiler ile değiştiriyoruz
+## 🛠️ Nelerden Yardım Alındı? (Teknolojiler)
+Bu projeyi geliştirirken aşağıdaki kütüphane ve araçlardan faydalanılmıştır:
+- **Python & Flask:** Uygulamanın ana iskeleti ve web sunucusu için.
+- **TensorFlow & Keras:** Yapay zeka modelinin çalıştırılması ve tahminleme yapılması için.
+- **OpenCV:** Kamera görüntüsünün işlenmesi ve yüz tespiti (Haar Cascade) için.
+- **Teachable Machine:** Modelin eğitilmesi ve veri seti oluşturulması için.
+- **Gdown:** Google Drive API entegrasyonu ve dosya senkronizasyonu için.
 
-4. Terminale python main.py yazıyoruz ve işlem bu kadar programımız calısıyor
+## 🚀 Nasıl Çalıştırılır?
+1. Proje dosyalarını indirin.
+2. Gerekli kütüphaneleri yükleyin: `pip install flask opencv-python tensorflow tf-keras gdown`.
+3. `python3 app.py` komutuyla sistemi başlatın.
+4. Tarayıcınızdan `http://localhost:5001` adresine gidin.
+
+## 👨‍💻 Geliştirici
+- **Deniz Yılmaz** - 11/A Yazılım Bölümü Öğrencisi
